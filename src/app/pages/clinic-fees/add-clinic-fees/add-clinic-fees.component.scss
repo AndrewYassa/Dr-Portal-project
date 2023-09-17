@@ -1,0 +1,19 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  border-style: outset;
+  width: fit-content;
+}
+
+.btn-submit,
+.btn-cancel {
+  border-radius: 50px;
+  border-style: outset;
+  padding: 0.8rem 2rem !important;
+  width: fit-content;
+}

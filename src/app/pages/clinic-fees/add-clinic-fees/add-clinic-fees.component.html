@@ -1,0 +1,115 @@
+<form [formGroup]="feesForm" (ngSubmit)="onSubmit()">
+  <div class="container-fluid" style="padding: 0px">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-title mb-1">
+          <h3 class="title mb-0">Add Clinic Fees</h3>
+          <hr class="my-4" />
+          <div>
+            <div class="form-group">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <h4 class="title mb-0">Appointment Fees</h4>
+                  <label for="appointmentFees" class="form-label">Amount</label>
+                  <input
+                    [class.is-invalid]="
+                      appointmentFees?.invalid && appointmentFees?.touched
+                    "
+                    type="number"
+                    min="0"
+                    class="form-control"
+                    id="amount"
+                    placeholder=""
+                    formControlName="appointmentFees"
+                  />
+                  <small
+                    class="text-danger"
+                    *ngIf="appointmentFees?.invalid && appointmentFees?.touched"
+                    >Value is required</small
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <h4 class="title mb-0">Follow Up Fees</h4>
+                  <label for="followUpFees" class="form-label">Amount</label>
+                  <input
+                    [class.is-invalid]="
+                      followUpFees?.invalid && followUpFees?.touched
+                    "
+                    type="number"
+                    min="0"
+                    class="form-control"
+                    id="amount"
+                    placeholder=""
+                    formControlName="followUpFees"
+                  />
+                  <small
+                    class="text-danger"
+                    *ngIf="followUpFees?.invalid && followUpFees?.touched"
+                    >Value is required</small
+                  >
+                </div>
+              </div>
+
+              <br />
+              <br />
+
+              <div class="form-group">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <h4 class="title mb-0">Discount</h4>
+                    <label for="discount" class="form-label"
+                      >Discount Percentage</label
+                    >
+                    <input
+                      [class.is-invalid]="
+                        discount?.invalid && discount?.touched
+                      "
+                      type="number"
+                      min="0"
+                      class="form-control"
+                      id="followUpFees"
+                      placeholder=""
+                      formControlName="discount"
+                    />
+                    <small
+                      class="text-danger"
+                      *ngIf="discount?.invalid && discount?.touched"
+                      >Value is required</small
+                    >
+                  </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="row justify-content-center mt-4">
+                  <div class="col-12 text-right">
+                    <button
+                      class="w-30 btn btn-psp-secondery btn-cancel btn-lg"
+                      type="cancel"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="w-30 btn btn-psp-primary btn-submit btn-lg"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
