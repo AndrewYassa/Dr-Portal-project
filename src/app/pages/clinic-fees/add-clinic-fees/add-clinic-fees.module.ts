@@ -13,6 +13,7 @@ import { ClinicFeesModule } from '../clinic-fees.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+   
     
     FormsModule
   ]

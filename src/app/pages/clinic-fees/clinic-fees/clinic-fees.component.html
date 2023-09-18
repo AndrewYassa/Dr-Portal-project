@@ -1,4 +1,5 @@
-<div class="container-fluid" style="padding: 0px">
+
+<div *ngIf="!showFees" class="container-fluid" style="padding: 0px">
     <div class="card">
       <div class="card-body">
         <div class="table-title mb-1">
@@ -383,3 +384,46 @@
     </div>
   </div>
   
+  
+  
+  <div *ngIf="showFees" class="container-fluid" style="padding: 0px">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-title mb-1">
+          <h3 class="title mb-0">Add Clinic Fees</h3>
+          <hr class="my-4" />
+          
+          <div >
+            <div class="form-group">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <h4 class="title mb-0">Appointment Fees</h4>
+                  <label for="appointmentFees" class="form-label">Amount</label>
+                  
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div>
+            <div class="form-group">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <h4 class="title mb-0">Follow Up Fees</h4>
+                  <label for="followUpFees" class="form-label">Amount</label>
+                 
+                  
+                </div>
+              </div>
+
+              <div>
+                <div class="form-group">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <h4 class="title mb-0">Discount</h4>
+                      <label for="appointmentFees" class="form-label">Amount</label>
+                      
+                    </div>
+                  </div>
+                </div>
+                

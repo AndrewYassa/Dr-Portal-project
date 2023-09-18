@@ -11,6 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AddClinicFeesService } from '@services/add-clinic-fees/add-clinic-fees.service';
 import { showNotification } from '@helpers/show-toast';
 import { ToastrService } from 'ngx-toastr';
+import { IClinic } from '@interfaces/clinic/clinic';
+import { GenericResponse } from '@interfaces/Generic/i-response';
+
 
 @Component({
   selector: 'add-clinic-fees',
@@ -26,7 +29,9 @@ export class  AddClinicFeesComponenet implements OnInit {
   FollowUpFees: number;
   DiscountPercentage: number;
   loading = false;
-
+  showFees : true;
+  
+  
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -34,6 +39,7 @@ export class  AddClinicFeesComponenet implements OnInit {
     private toastr: ToastrService,
     private fb: FormBuilder,
     private spinner: NgxSpinnerService,
+    
     ) {}
   
   
@@ -48,30 +54,13 @@ export class  AddClinicFeesComponenet implements OnInit {
     // this.addClinicFeesService.getClinicFess().subscribe({
     //   next:addClinicFeesData=>this.addClinicFees=addClinicFeesData
     // })
+   
   }
   
 
 
-  getClinicFess() {
-    this.loading = true;
-    this.spinner.show();
-    this.addClinicFeesService.getClinicFess().subscribe(
-      (response)=> {
-        this.loading = false;
-          this.spinner.hide();
-    
   
-  },
-  (error) => {
-    console.log(error);
-    showNotification(
-      'danger',
-      `Something went wrong , please try again`,
-      this.toastr
-    );
-  }
-    );
-}
+
 
 
 

@@ -41,8 +41,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppRoutingModule,
     PerfectScrollbarModule,
     SharedModule,
-    DropdownModule
-
+    DropdownModule,
   ],
   providers: [
     {

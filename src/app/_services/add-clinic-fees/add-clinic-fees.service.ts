@@ -24,7 +24,7 @@ export class AddClinicFeesService {
     return this.http.post<GenericResponse<IClinic>>(this.addClinicFeesApi, body);
 }
 
-getClinicFess():Observable<GenericResponse<IClinic>>{
+getAllClinicFees():Observable<GenericResponse<IClinic>>{
 
 
 return this.http.get<GenericResponse<IClinic>>(this.getClinicFees);

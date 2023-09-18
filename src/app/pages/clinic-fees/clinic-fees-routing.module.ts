@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClinicFeesComponent } from './clinic-fees/clinic-fees.component';
 import { AddClinicFeesComponenet} from './add-clinic-fees/add-clinic-fees.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: AddClinicFeesComponenet,
     pathMatch: 'full',
   },
+ 
  
 ];
 

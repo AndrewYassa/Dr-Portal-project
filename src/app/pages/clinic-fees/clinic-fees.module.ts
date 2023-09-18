@@ -6,8 +6,9 @@ import { AddClinicFeesComponenet, } from './add-clinic-fees/add-clinic-fees.comp
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
-  declarations: [ClinicFeesComponent, AddClinicFeesComponenet
+  declarations: [ClinicFeesComponent, AddClinicFeesComponenet, 
   ],
   imports: [CommonModule, ClinicFeesRoutingModule, ReactiveFormsModule,FormsModule],
 })
