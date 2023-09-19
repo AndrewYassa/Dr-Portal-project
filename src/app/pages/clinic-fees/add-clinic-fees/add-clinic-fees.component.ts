@@ -60,24 +60,24 @@ export class  AddClinicFeesComponenet implements OnInit {
 
 
   
-  getClinicFess() {
-    this.loading = true;
-    this.spinner.show();
-    this.addClinicFeesService.getAllClinicFees().subscribe(
-      (response) => {
-        this.loading = false;
-        this.spinner.hide();
-      },
-      (error) => {
-        console.log(error);
-        showNotification(
-          'danger',
-          `Something went wrong, please try again`,
-          this.toastr
-        );
-      }
-    );
-  }
+  // getClinicFess() {
+  //   this.loading = true;
+  //   this.spinner.show();
+  //   this.addClinicFeesService.getAllClinicFees().subscribe(
+  //     (response) => {
+  //       this.loading = false;
+  //       this.spinner.hide();
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //       showNotification(
+  //         'danger',
+  //         `Something went wrong, please try again`,
+  //         this.toastr
+  //       );
+  //     }
+  //   );
+  // }
 
 
 

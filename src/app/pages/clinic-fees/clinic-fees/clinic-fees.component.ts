@@ -5,6 +5,7 @@ import { IClinic } from '@interfaces/clinic/clinic';
 import { AddClinicFeesService } from '@services/add-clinic-fees/add-clinic-fees.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { showNotification } from '@helpers/show-toast';
 
 @Component({
   selector: 'clinic-fees',
@@ -33,23 +34,30 @@ export class ClinicFeesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getClinicFees();
+    // this.getClinicFees();
   }
 
-  getClinicFees() {
-    this.loading = true;
-    this.spinner.show();
-    this.addClinicFeesService.getAllClinicFees()
+  // getClinicFees() {
+  //   this.loading = true;
+  //   this.spinner.show();
+  //   this.addClinicFeesService.getAllClinicFees()
     
-    .subscribe(
-      (response) => {
-       
+  //   .subscribe(
+  //     (response) => {
+  //       this.loading = false;
+  //       this.showFees=true
+  //       this.spinner.hide();
+  //     },
         
-      },
-      (error) => {
-        console.log(error);
-        
-      }
-    );
-    }
+  //     (error) => {
+  //       this.showFees=false
+  //       console.log(error);
+  //       showNotification(
+  //         'danger',
+  //         `Something went wrong, please try again`,
+  //         this.toastr
+  //       );
+  //     }
+  //   );
+  // }
   }
