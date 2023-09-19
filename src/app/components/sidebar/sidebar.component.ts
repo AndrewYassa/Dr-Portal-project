@@ -14,7 +14,7 @@ const misc: any = {
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  isCollapsed: boolean = true;
+  isCollapsed?: boolean = true;
   menuItems: IRouteInfo[];
   navigationModel: NavigationModel;
 

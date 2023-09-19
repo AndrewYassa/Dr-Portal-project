@@ -45,10 +45,10 @@ export class  AddClinicFeesComponenet implements OnInit {
   
 
   ngOnInit(): void {
-    this.feesForm = new FormGroup({
-      appointmentFees: new FormControl('', Validators.required),
-      followUpFees: new FormControl('', Validators.required),
-      discount: new FormControl('', Validators.required) ,
+    this.feesForm = this.fb.group({
+      appointmentFees: ['', Validators.required],
+      followUpFees: ['', Validators.required],
+      discount: ['', Validators.required ],
     });
 
     // this.addClinicFeesService.getClinicFess().subscribe({
@@ -60,7 +60,24 @@ export class  AddClinicFeesComponenet implements OnInit {
 
 
   
-
+  getClinicFess() {
+    this.loading = true;
+    this.spinner.show();
+    this.addClinicFeesService.getAllClinicFees().subscribe(
+      (response) => {
+        this.loading = false;
+        this.spinner.hide();
+      },
+      (error) => {
+        console.log(error);
+        showNotification(
+          'danger',
+          `Something went wrong, please try again`,
+          this.toastr
+        );
+      }
+    );
+  }
 
 
 
@@ -78,7 +95,7 @@ export class  AddClinicFeesComponenet implements OnInit {
         this.router.navigateByUrl('/');
         showNotification(
           'success',
-          `Fees added succesully`,
+          `Fees Added Succesfully`,
           this.toastr
         );
       },
